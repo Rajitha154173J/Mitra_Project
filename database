@@ -5,8 +5,34 @@ create table Human_Resourse_Manager
 	lastName varchar(50),
 	address varchar(100),
 	email varchar(60),
-	password varchar(50),
+	humanPassword varchar(50),
 	
 	constraint Human_Resourse_Manager_pk primary key (humanId)
+
+);
+
+create table Resourse_Manager
+(
+	RMId varchar(20),
+	fastName varchar(30),
+	lastName varchar(50),
+	address varchar(100),
+	email varchar(60),
+	RMPassword varchar(50),
+	
+	constraint Resourse_Manager_pk primary key (resourseId)
+
+);
+
+create table Project_Manager
+(
+	PMId varchar(20),
+	fastName varchar(30),
+	lastName varchar(50),
+	address varchar(100),
+	email varchar(60),
+	PMPassword varchar(50),
+	
+	constraint Project_Manager_pk primary key (PMId)
 
 );
