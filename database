@@ -33,6 +33,240 @@ create table Project_Manager
 	email varchar(60),
 	PMPassword varchar(50),
 	
-	constraint Project_Manager_pk primary key (PMId)
+	constraint Project_Manager_pk primary key (PMId) 
 
 );
+
+
+
+create table level3Employee 
+(
+	EmpId varchar(20),
+	fastName varchar (40),
+	lastName varchar(50),
+	address varchar(100),
+	email varchar(60),
+	birthDay varchar(25),
+	role varchar(20),
+	EmpPassword varchar(30),
+	worked_year varchar(20),
+	allocated_project_id varchar(20),
+	no_of_project varchar(20),
+	HR_rating int(10),
+	completed_project_id varchar(20),
+	
+	constraint level3Employee_pk primary key (EmpId)
+	
+);
+
+create table contact_no
+(
+	humanId varchar(20),
+	RMId varchar(20),
+	PMId varchar(20),
+	EmpId varchar(20),
+	TeleNo int(12),
+	
+		constraint contact_no_pk primary key (humanId,RMId,PMId,EmpId,TeleNo),
+		constraint contact_no_fk1 foreign key (RMId) references Resourse_Manager(RMId),
+		constraint contact_no_fk2 foreign key (PMId) references Project_Manager(PMId),
+		constraint contact_no_fk3 foreign key (humanId) references Human_Resourse_Manager(humanId)
+);
+
+create table Resource_request
+(
+	res_requestId varchar(20),
+	PMId varchar(20),
+	RMId varchar(20),
+	NoofEmp int(10),
+	states varchar(50),
+	designation varchar(100),
+	times DATETIME,
+	description varchar(100),
+	
+	constraint Resource_request_pk primary key (res_requestId),
+	constraint Resource_request_fk1 foreign key (RMId) references Resourse_Manager(RMId),
+	constraint Resource_request_fk2 foreign key (PMId) references Project_Manager(PMId)
+
+);	
+
+create table hiring_request
+(
+	hiring_requestId varchar(20),
+	PMId varchar(20),
+	humanId varchar(20),
+	NoofEmp int(10),
+	states varchar(50),
+	hiring_duration varchar(50);
+	designation varchar(100),
+	times DATETIME,
+	description varchar(100),
+	
+	constraint Hiring_request_pk primary key (hiring_requestId),
+	constraint Hiring_request_fk1 foreign key (humanId) references Human_Resourse_Manager(humanId),
+	constraint Hiring_request_fk2 foreign key (PMId) references Project_Manager(PMId)
+);
+		
+create table skills
+(
+	skill varchar(100),
+	hiring_requestId varchar(20),
+	res_requestId varchar(20),
+	
+	constraint skills_pk primary key (hiring_requestId,skill,res_requestId),
+	constraint skills_fk1 foreign key (hiring_requestId) references hiring_request(hiring_requestId),
+	constraint skills_fk2 foreign key (res_requestId) references resource_request(res_requestId)
+	
+);
+
+
+create table project
+(
+	projectId varchar(20),
+	types varchar(50),
+	projectName varchar(50),
+	receiveDate varchar(30),
+	submissionDate varchar(30),
+	accName varchar(50),
+	times DATETIME,
+	description varchar(100),
+	
+	constraint project_pk primary key (projectId)
+
+);
+
+
+
+create table billing
+(
+	billID varchar(20),
+	projectId varchar(20),
+	EmpId varchar(20),
+	RMId varchar(20),
+	amount decimal(13,2),
+	
+	constraint billing_pk primary key (billID),
+	constraint billing_fk1 foreign key (EmpId) references level3Employee(EmpId),
+	constraint billing_fk2 foreign key (projectId) references project(projectId),
+	constraint billing_fk3 foreign key (RMId) references Resourse_Manager(RMId)
+
+
+);	
+	
+create table account
+(
+	accountId varchar(20),
+	accName varchar(50),
+	PMId varchar(20),
+	times DATETIME,
+	description varchar(100),
+
+	constraint account_pk primary key (accountId),
+	constraint account_fk foreign key (PMId) references Project_Manager(PMId)
+);
+	
+create table has
+(
+	accountId varchar(20),
+	projectId varchar(20),
+
+	constraint has_pk primary key (projectId,accountId),
+	constraint has_fk1 foreign key (accountId) references account(accountId),
+	constraint has_fk2 foreign key (projectId) references project(projectId)
+
+);
+
+create table review 
+(
+	reviewId varchar(20),
+	reviewDescription varchar(100),
+	accountId varchar(20),
+	projectRate int(10),
+	times DATETIME,
+	description varchar(100),
+	
+	constraint review_pk primary key (reviewId),
+	constraint review_fk foreign key (accountId) references account(accountId)
+
+);
+	
+
+create table phase
+(
+	phaseNo int(10),
+	projectId varchar(20),
+	noOfPhase int(20),
+	status varchar(60),
+	times DATETIME,
+	description varchar(100),
+	
+	constraint phase_pk primary key (phaseNo,projectId),
+	constraint phase_fk foreign key (projectId) references project(projectId)
+);	
+
+create table requirement_resource
+(
+	req_resourceId varchar(20),
+	projectId varchar(20),
+	
+	constraint requirement_resource_pk primary key (req_resourceId,projectId),
+	constraint requirement_resource_fk foreign key (projectId) references project(projectId)
+);
+
+create table allocated_resource
+(
+	allocated_resourceId varchar(20),
+	phaseNo int(10),
+	projectId varchar(20),
+	
+	constraint allocated_resource_pk primary key (phaseNo,projectId,allocated_resourceId),
+	constraint allocated_resource_fk1 foreign key (projectId) references project(projectId),
+	constraint allocated_resource_fk2 foreign key (phaseNo) references phase(phaseNo)
+
+);
+	
+
+
+create table is_Assigned_To
+(
+	EmpId varchar(20),
+	phaseNo int(10),
+	projectId varchar(20),
+	compled_or_not varchar(10),
+	hours int (10),
+	
+	constraint is_Assigned_To_pk primary key (phaseNo,projectId,EmpId),
+	constraint is_Assigned_To_fk1 foreign key (projectId) references project(projectId),
+	constraint is_Assigned_To_fk2 foreign key (phaseNo) references phase(phaseNo),
+	constraint is_Assigned_To_fk3 foreign key (EmpId) references level3Employee(EmpId)
+); 
+
+create table manage
+(
+	EmpId varchar(20),
+	humanId varchar(20),
+
+	constraint manage_pk primary key (humanId,EmpId),
+	constraint manage_fk1 foreign key (EmpId) references level3Employee(EmpId),
+	constraint manage_fk2 foreign key (humanId) references Human_Resourse_Manager(humanId)
+);	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
