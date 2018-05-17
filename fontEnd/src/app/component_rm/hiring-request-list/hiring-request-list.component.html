@@ -1,0 +1,13 @@
+<br>
+<div class="container jumbotron col-md-6">
+  <div class="list-group">
+    <div class="list-group-item active">
+      <h4>Hiring Request</h4>
+      <div class="list-group-item-success list-group-item" *ngFor="let pro of projects">
+        <p >{{pro.firstname}}<button (click)="getDetails(pro)" class="btn btn-success pull-right col-md-6">Accept</button></p>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>

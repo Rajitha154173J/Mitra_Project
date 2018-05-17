@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<br>
+<div id="p" class="container jumbotron col-sm-6 ">
+
+  <div class="register">
+
+    <h1>Login</h1>
+    <form #form="ngForm">
+
+      <Label>
+        <h5 class="fntcolr">Email</h5>
+      </Label>
+      <h5>
+        <input type="text" class="ng-untouched" placeholder="email" required="required" name="email" [(ngModel)]="email" />
+      </h5>
+
+      <label>
+        <h5 class="fntcolr">Password</h5>
+      </label>
+      <input type="password" class="ng-untouched" name="password" placeholder="Password" required="required" [(ngModel)]="password"
+      />
+      <div class="btn-toolbar">
+        <button type="submit" class="col-sm-4 btn btn-primary btn-block btn-large" (click)="ClickButton()">
+          <!--  ****************** -->
+
+          <h5 class="fntcolr">Login</h5>
+
+        </button>
+        <br>
+
+        <br>
+        <button type="cancel" class="col-sm-4 btn btn-primary btn-block btn-large">
+          <h5 class="fntcolr">Cancel</h5>
+        </button>
+      </div>
+    </form>
+    <br>
+  </div>
+</div>

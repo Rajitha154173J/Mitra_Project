@@ -1,0 +1,131 @@
+<app-profile-navbar></app-profile-navbar>
+
+
+
+<div class="container jumbotron col-sm-6">
+  <h3>My Profile</h3>
+  <div class="col-lg-6 col-sm-6 ">
+    <div class="card hovercard">
+      <div class="card-background">
+        <img class="card-bkimg" alt="" src="https://www.columncaseinvestigative.com/images/stories/slideshow/program-integrity-banner-background.jpg">
+        <!-- http://lorempixel.com/850/280/people/9/ -->
+      </div>
+      <div class="useravatar">
+        <img alt="" src="https://res.cloudinary.com/demo/image/upload/w_200,h_200,c_thumb,g_face,r_max/face_left.png">
+      </div>
+      <div class="card-info">
+        <span class="card-title"></span>
+      </div>
+    </div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+      <!-- <div class="btn-group" role="group">
+        <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab">
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <div class="hidden-xs">Stars</div>
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          <div class="hidden-xs">Favorites</div>
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <div class="hidden-xs">Following</div>
+        </button>
+      </div> -->
+    </div>
+  </div>
+
+
+  <div class="raw">
+    <div class="col-md-2">
+      <!-- <img alt="" src="http://lorempixel.com/100/100/people/9/"> -->
+    </div>
+    <div class="col-sm-10">
+      <ul class="list-group">
+        <li (click)="edit()" class=" list-group-item list-group-item-success">
+          <h5>UserID:</h5>{{profile.id}}
+        </li>
+        <br>
+        <li class="list-group-item list-group-item-success">
+          <h5>Name:</h5>{{profile.name}}
+        </li>
+        <br>
+        <li class="list-group-item list-group-item-success">
+          <h5>Role:</h5>{{role}}
+        </li>
+         <br>
+        <li class="list-group-item list-group-item-success">
+          <h5>Email :</h5>{{profile.email}}
+        </li> 
+         <br>
+        <li class="list-group-item list-group-item-success">
+          <h5>Enrolled year:</h5>{{profile.enrolled_year}}
+        </li>
+        <br>
+        <li class="list-group-item list-group-item-success">
+          <h5>Date of Birth:</h5>{{profile.dob}}
+        </li>
+        <br>
+        <li class="list-group-item list-group-item-success">
+          <h5>Address :</h5>{{profile.address}}
+        </li>
+       
+        <br>
+        <li class="list-group-item list-group-item-success">
+         Projects
+          <a class="btn btn-success" type="button" (click)="getdeadline(eid)">Deadlines</a>
+        </li>
+
+
+        <!-- <div class="dropdown  cccc">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="inline"> Notifications <h4 class="ddd">{{len}}</h4></div>
+           
+          </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="col-sm-12 list-group-item-success list-group-item" *ngFor="let deadline of deadline">
+              {{note}}
+          </div>
+        </div>
+        </div> -->
+
+      </ul>
+    </div>
+  </div>
+  <br>
+
+
+  <span class="pull-right">
+    <div class="btn-group ">
+      <div class="col-sm-3"></div>
+        <a class="btn btn-success " (click)="goeditProfile()"  type="button" name="save" id="option1">
+          <h5> Edit</h5>
+        </a>
+    </div>
+  </span>
+
+  <span class="pull-right">
+    <div class="btn-group ">
+      <div class="col-sm-3"></div>
+        <a class="btn btn-success " href="reset-password" type="button" name="save" id="option1">
+          <h5>Reset password</h5>
+        </a>
+    </div>
+  </span>
+
+  <span class="pull-right">
+    <div class="btn-group ">
+<!--       
+        <button class="btn btn-success" href="" type="button" name="save" id="option1">
+          <h5> Delete</h5> 
+        </button>-->
+     
+    </div>
+  </span>
+</div>
+
+<div></div>

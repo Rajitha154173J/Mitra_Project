@@ -1,0 +1,89 @@
+<app-admin-navbar></app-admin-navbar>
+
+
+<!-- <p>
+  employee-details works!
+
+</p>
+<h1>{{id}}</h1>
+<h1>{{name}}</h1> -->
+
+
+<div class="container jumbotron col-sm-6">
+  <h3>Employee Details</h3>
+
+  <div class="col-lg-6 col-sm-6 ">
+    <div class="card hovercard">
+      <div class="card-background">
+        <img class="card-bkimg" alt="" src="https://www.columncaseinvestigative.com/images/stories/slideshow/program-integrity-banner-background.jpg">
+        <!-- http://lorempixel.com/850/280/people/9/ -->
+      </div>
+      <div class="useravatar">
+        <img alt="" src="https://res.cloudinary.com/demo/image/upload/w_200,h_200,c_thumb,g_face,r_max/face_left.png">
+      </div>
+      <div class="card-info">
+        <span class="card-title"></span>
+      </div>
+    </div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+
+    </div>
+
+
+
+  </div>
+
+
+  <div class="raw">
+    <div class="col-md-2">
+      <!-- <img alt="" src="http://lorempixel.com/100/100/people/9/"> -->
+    </div>
+    <div class="col-sm-10">
+      <ul class="list-group">
+        <li class=" list-group-item list-group-item-success">
+          <h5>UserID: </h5>{{id}}</li>
+        <!-- <br> -->
+        <li class="list-group-item list-group-item-success">
+          <h5>Name: </h5> {{name}}</li>
+        <!-- <br> -->
+<!-- 
+        <li class="list-group-item list-group-item-success">
+          <h5>Role : </h5>{{role}}</li> -->
+        <!-- <br> -->
+        <li class="list-group-item list-group-item-success">
+          <h5>Email: </h5> {{email}}</li>
+        <!-- <br> -->
+        <li class="list-group-item list-group-item-success">
+          <h5>Skills : </h5>{{skills}}</li>
+        <!-- <br> -->
+        <li class="list-group-item list-group-item-success">
+          <h5>Enrolled Year: </h5>{{enrolled_year}}</li>
+          <li class="list-group-item list-group-item-success">
+            <h5>Date of Birth : </h5>{{dob}}</li>
+        <!-- <br> -->
+        <li class="list-group-item list-group-item-success">
+          <h5>Address : </h5>{{address}}</li>
+
+      </ul>
+    </div>
+  </div>
+  <br>
+
+
+
+  <span class="pull-right">
+    <div class="btn-group ">
+      <label class="btn btn-success ">
+        <a class="btn btn-success" href="employee" type="button" name="save" id="option1">
+          <h5> Done</h5>
+        </a>
+      </label>
+
+      <label class="btn btn-success ">
+        <a (click)="delete(id)" class="btn btn-success"  type="button" name="delete" id="">
+          <h5> Delete</h5>
+        </a>
+      </label>
+    </div>
+  </span>
+</div>

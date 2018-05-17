@@ -1,0 +1,79 @@
+
+
+h2{
+    background-color: #3d6e75;
+    color: #c3e62c;
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW-8asgEXOe85pb4qLvE2Qq9GDzNSzVbLxFQzXZG96HM8XJZGriw'); */
+
+}
+
+.img{
+/* height: 500px; */
+width: 900px;
+}
+
+.jumbotron {
+    
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #c7d4e0;
+    border-radius: .3rem;
+    
+    /* height: 150; */
+
+	/* background-image: url('https://www.columncaseinvestigative.com/images/stories/slideshow/program-integrity-banner-background.jpg'); */
+}
+
+/***************************/
+carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+}
+
+
+.carousel-item {
+    position: relative;
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: transform .2s ease,-webkit-transform .2s ease;
+}
+
+div.lfside {
+    float:right;
+    max-width: 2000px;
+    margin: 0;
+    padding: 5em;
+    width: 800px;
+    padding-right: 5%;
+    border-right: 50px;
+}
+
+div.rside{
+    float:left;
+    max-width: 400px;
+    margin: 0;
+    padding-right: 1%;
+    padding-left: 5%;
+   
+
+    /* width: 1000px; */
+  
+}
+
+h1{
+    color: rgb(138, 5, 105);
+    font-weight: 900;
+}
+
+.ccl{
+    background-color: blue;
+   background-size: 1000px;
+    size: 1000px;
+}
+
+img.ss{
+    max-block-size: 200px;
+}

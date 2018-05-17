@@ -1,0 +1,63 @@
+li{
+    color: black;
+}
+
+.bg-dark {
+    background-color: #3b6acc!important;
+}
+
+.btn-success {
+    color: #dfdbdb;
+    background-color: #0c2f51;
+    border-color: #d151ae;
+  }
+  
+  
+  
+  a {
+    color: #f8f9fa;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}  
+
+
+
+#sidebar{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: rgb(46, 103, 109);
+}
+
+#sidebar ul li{
+    color: rgb(221, 213, 98);
+    list-style: none;
+    padding: 15px;
+}
+
+#a reqNo{
+    color: red;
+    
+}
+
+.list-group-item-success {
+    color: #155724;
+    background-color: #092d33;
+}
+
+.navbar{
+    background-image: url('http://www.wallpaperstop.com/wallpapers/3d-wallpapers/digital-art-wallpapers/digital-wallpaper-download-1600x1200-1008010.jpg');
+
+}
+
+h4{
+    font-weight: 900;
+}
+.role{
+    font-weight: 600;
+}
+
+img{
+    height: 80px;
+   }

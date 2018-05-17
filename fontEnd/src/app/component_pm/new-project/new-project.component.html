@@ -1,0 +1,96 @@
+<app-navbar-pm></app-navbar-pm>
+
+
+<br>
+<div class="col-sm-6 container jumbotron">
+  <form #form="ngForm" (ngSubmit)="createProject(form.value)">
+    <fieldset>
+      <div>
+        <ul></ul>
+        <ul></ul>
+        <h4 class="center">Create a New Project</h4>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h5>Project Name</h5>
+        </label>
+        <input type="text" class="form-control" id="pname" placeholder="Project Name" name="name" [(ngModel)]="name">
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h5>Number of phases</h5>
+        </label>
+        <input type="text" class="form-control" id="noPhase" placeholder="No of phases" name="noPhase" [(ngModel)]="noPhase">
+      </div>
+
+      <div class="container jumbotron">
+        <h5>Number Of Employee</h5>
+        <div class=" form-inline">
+          <div class="form-group row mr-auto">
+            <div class="">
+              <label>
+                <h5>RM</h5>
+              </label>
+            </div>
+            <input type="text" class="col-sm-1" id="RM" name="NoRm" [(ngModel)]="NoRm">
+            <ul></ul>
+            <div class="">
+              <label>
+                <h5>Archi</h5>
+              </label>
+            </div>
+            <input type="text" class="col-sm-1" id="RM" name="NoArchi" [(ngModel)]="NoArchi">
+          </div>
+        </div>
+        <br>
+        <div class=" form-inline">
+          <div class=" form-group row mr-auto">
+            <div class="">
+              <label>
+                <h5>Developers</h5>
+              </label>
+            </div>
+            <input type="text" class="col-sm-1" id="RM" name="NoDevelopers" [(ngModel)]="NoDevelopers">
+            <ul></ul>
+            <div class="">
+              <label>
+                <h5>QA</h5>
+              </label>
+            </div>
+            <input type="text" class="col-sm-1" id="RM" name="NoQA" [(ngModel)]="NoQA">
+
+            <ul></ul>
+            <div class="">
+              <label>
+                <h5>BA</h5>
+              </label>
+            </div>
+            <input type="text" class="col-sm-1" id="RM" name="NoBA" [(ngModel)]="NoBA">
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <h5>Received Date:</h5>
+      <my-date-picker ngModel name="receiveDate" [options]="myDatePickerOptions" [(ngModel)]="receiveDate" #picker (ngModelChange)="getreceiveDate(receiveDate)"
+        required>
+      </my-date-picker>
+
+      <br>
+      <h5>Submission Date:</h5>
+      <my-date-picker ngModel name="submissionDate" [options]="myDatePickerOptions" [(ngModel)]="submissionDate" #picker (ngModelChange)="getsubmissionDate(submissionDate)"
+        required>
+      </my-date-picker>
+
+      <div class="form-group">
+        <label>
+          <h5>Description</h5>
+        </label>
+        <textarea class="form-control" rows="3" name="description" [(ngModel)]="description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-secondary">Save</button>
+    </fieldset>
+  </form>
+</div>>

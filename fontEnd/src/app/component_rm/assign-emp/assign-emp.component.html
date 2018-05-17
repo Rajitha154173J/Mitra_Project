@@ -1,0 +1,172 @@
+<app-navbar-rm></app-navbar-rm>
+
+
+<div class="container jumbotron sss col-md-6">
+  <div class="list-group">
+    <div class="list-group-item active">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Assign Employees</h3>
+        </div>
+        <div>
+          <h5>Project ID :{{oneproject.id}} </h5>
+          <h5>Project Name : {{oneproject.name}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br>
+
+  <!-- ////////////////////// -->
+  <div class="container">
+
+    <table class="table table-hover table-dark">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Required</th>
+          <th>Availabale</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Developers</td>
+          <td>{{oneproject.NoOfDev}}</td>
+          <td>{{freeEmployeeList.developer}}</td>
+          <td>
+
+
+
+
+            <!-- <a type="button" (click)="assignDev()" class=" btn btn-success list-group-item-action ">Assign</a> -->
+            <div class="dropdown">
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- <a class="dropdown-item" >{{note.body}}</a> -->
+                <div class="list-group-item-success list-group-item" *ngFor="let note of body">
+                  {{note}}
+
+
+                </div>
+              </div>
+            </div>
+            <ul></ul>
+
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <td>Business Analyst</td>
+          <td>{{oneproject.NoOfBA}}</td>
+          <td>{{freeEmployeeList.business_analyst}}</td>
+          <td>
+            <!-- <a type="button" (click)="assignDev()" class=" btn btn-success list-group-item-action ">Assign</a> -->
+
+
+            <!-- <div class="list-group-item-success list-group-item" *ngFor="let freeDev of freeDev"> -->
+            <!-- <p (click)="freeDev(freeDev)"> -->
+            <!-- <span class="badge badge-primary badge-pill">mm</span> -->
+            <!-- {{freeDev}} -->
+            <!-- </p> -->
+            <!-- </div> -->
+
+
+          </td>
+
+        </tr>
+        <tr>
+          <td>Architecture</td>
+          <td>{{oneproject.NoOfArchi}}</td>
+          <td>{{freeEmployeeList.architecture}}</td>
+          <td>
+            <!-- <a type="button" (click)="assignNewProject()" class=" btn btn-success list-group-item-action ">Assign</a> -->
+          </td>
+        </tr>
+        <tr>
+          <td>Quality Assurance Engineer</td>
+          <td>{{oneproject.NoOfQA}}</td>
+          <td>{{freeEmployeeList.quality_assurance}}</td>
+          <td>
+            <!-- <a type="button" (click)="clickbutton()" class=" btn btn-success list-group-item-action ">Assign</a> -->
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<br><br>
+  <!-- //////////////////////////////////////////////////////// -->
+
+
+  <div class="container jumbotron zzz">
+    <div class="list-group">
+      <div class="list-group-item active">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Developers</h3>
+          </div>
+        </div>
+        <div class="list-group-item-success list-group-item inline" *ngFor="let freeDev of freeDev">
+          <span class="badge badge-primary badge-pill">{{freeDev.id}}</span> <h4>{{freeDev.name}}
+          <button (click)="assignpost(freeDev.id)" class="btn btn-success pull-right col-sm-3">Assign</button></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container jumbotron zzz">
+      <div class="list-group">
+        <div class="list-group-item active">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Busines Analysts</h3>
+            </div>
+          </div>
+          <div class="list-group-item-success list-group-item" *ngFor="let freeBa of freeBa">
+            <span class="badge badge-primary badge-pill">{{freeBa.id}}</span><h4> {{freeBa.name}}
+            <button (click)="assignpost(freeBa.id)" class="btn btn-success pull-right col-sm-3">Assign</button></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="container jumbotron zzz">
+    <div class="list-group">
+      <div class="list-group-item active">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Quality Assurance</h3>
+          </div>
+        </div>
+        <div class="list-group-item-success list-group-item" *ngFor="let freeQa of freeQa">
+          <span class="badge badge-primary badge-pill">{{freeQa.id}}</span> <h4>{{freeQa.name}}
+          <button (click)="assignpost(freeQa.id)" class="btn btn-success pull-right col-sm-3">Assign</button></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container jumbotron zzz">
+    <div class="list-group">
+      <div class="list-group-item active">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Architectures</h3>
+          </div>
+        </div>
+        <div class="list-group-item-success list-group-item" *ngFor="let freeArchi of freeArchi">
+          <span class="badge badge-primary badge-pill">{{freeArchi.id}}</span><h4> {{freeArchi.name}}
+          <button (click)="assignpost(freeArchi.id)" class="btn btn-success pull-right col-sm-3">Assign</button></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 

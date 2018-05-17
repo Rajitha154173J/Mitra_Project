@@ -1,0 +1,24 @@
+[
+    {
+        "userid": 1,
+        "lastname": " bbb",
+        "firstname": "kamal",
+        "email":"a@gmail.com",
+        "address":"abc"
+    },
+    {
+        "userid": 2,
+        "lastname": " cccc",
+        "firstname": "cacac",
+        "email":"a@gmail.com",
+        "address":"ytyt"
+    },
+    {
+        "userid": 3,
+        "lastname": " ddddd",
+        "firstname": "hahhah",
+        "email":"a@gmail.com",
+        "address":"mnb"
+    }
+    
+]

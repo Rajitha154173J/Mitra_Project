@@ -1,0 +1,270 @@
+ <app-admin-navbar></app-admin-navbar>
+
+
+
+<!--
+<div class="container jumbotron col-sm-6">
+
+  <h1>Add Employees</h1>
+  <form name="form" role="form" (ngSubmit)="registerUser(user)" #registerForm="ngForm">
+    <!-- <div [hidden]="heroForm.submitted"> -->
+
+    <!--  <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" class="form-control" required minlength="4" data-ng-maxlength="20" [(ngModel)]="user.name" #name="ngModel">
+
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+        <div *ngIf="name.errors.maxlength">
+          Name must be at least 20 characters long.
+        </div>
+
+      </div>
+    </div>
+
+
+    <Label>
+      <h5>Role</h5>
+    </Label>
+   <input type="text" placeholder="Role" required="required" name="role" [(ngModel)]="role"> -->
+     <!--<div>
+      <select class="" type="dropdown" placeholder="Role" required name="role" class="form-control" [(ngModel)]="user.role" #role="ngModel">
+        <option value="project-manager">Project Manager</option>
+        <option value="resource-manager">Resource Manager</option>
+        <option value="employee">Developer</option>
+        <option value="admin">Admin</option>
+        <option value="architecture">Architecture</option>
+        <option value="quality-assurance">Quality Assurance</option>
+        <option value="business-analyst">Business Analyst</option>
+      </select>
+
+      <div *ngIf="role.invalid && (role.dirty || role.touched)" class="alert alert-danger">
+
+        <div *ngIf="role.errors.required">
+          Role is required.
+        </div>
+
+      </div>
+    </div>
+
+    <Label>
+      <h5>Email</h5>
+    </Label>
+    <input type="email" placeholder="example@gmail.com" required class="form-control" name="email" #email="ngModel" [(ngModel)]="user.email">
+
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+
+      <div *ngIf="email.errors.required">
+        email is required.
+      </div>
+      <div *ngIf="email.errors.minlength">
+        Name must be at least 4 characters long.
+      </div>
+      <div *ngIf="email.errors.maxlength">
+        Name must be at least 20 characters long.
+      </div>
+
+    </div>
+
+    <Label>
+      <h5>Contact</h5>
+    </Label>
+    <input type="text" class="form-control" #contact="ngModel" placeholder="Contact" required name="contact" [(ngModel)]="user.contact">
+    <div *ngIf="contact.invalid && (contact.dirty || contact.touched)" class="alert alert-danger">
+      <div *ngIf="contact.errors.required">
+        Contact is required.
+      </div>
+    </div>
+    <Label>
+      <h5>Skills</h5>
+    </Label>
+    <input type="text" class="form-control" placeholder="Skills" required name="skill" #skill="ngModel" [(ngModel)]="user.skills">
+    <div *ngIf="skill.invalid && (skill.dirty || skill.touched)" class="alert alert-danger">
+      <div *ngIf="skill.errors.required">
+        Skills is required.
+      </div>
+    </div>
+    <br>
+    <h5>Date of Birth :</h5>
+    <my-date-picker class="form-control" #dob="ngModel" name="dob" [options]="myDatePickerOptions" [(ngModel)]="user.dob" #picker
+      (ngModelChange)="getDOB(user.dob)" required>
+    </my-date-picker>
+    <div *ngIf="dob.invalid && (dob.dirty || dob.touched)" class="alert alert-danger">
+      <div *ngIf="dob.errors.required">
+        DOB is required.
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <h5>Enrolled Year:</h5>
+    <my-date-picker class="form-control" #enrolledyear="ngModel" name="enrolledyear" [options]="myDatePickerOptions" [(ngModel)]="user.enrolled_year"
+      #picker (ngModelChange)="getEnrolledYear(user.enrolled_year)" required>
+    </my-date-picker>
+    <div *ngIf="enrolledyear.invalid && (enrolledyear.dirty || enrolledyear.touched)" class="alert alert-danger">
+      <div *ngIf="enrolledyear.errors.required">
+        Enroled Year is required.
+      </div>
+    </div>
+    <br>
+
+    <Label>
+      <h5>Address</h5>
+    </Label>
+    <input type="text" class="form-control" placeholder="Address" required name="address" #address="ngModel" [(ngModel)]="user.address">
+    <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+      <div *ngIf="address.errors.required">
+        Address is required.
+      </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary btn-large" [disabled]="registerForm.form.invalid">Submit</button>
+    <button type="button" class="btn btn-default" (click)="registerForm.resetForm({})">Reset</button> -->
+    <!-- </div> -->
+
+
+    <!-- <div class="submitted-message" *ngIf="heroForm.submitted">
+        <p>You've submitted your hero, {{ heroForm.value.name }}!</p>
+        <button (click)="heroForm.resetForm({})">Add new hero</button>
+      </div>
+  </form>
+
+</div> --> -->
+
+
+<div class="container jumbotron col-sm-6">
+  <div class="register">
+    <h1>Add Employees</h1>
+    <form #form="ngForm" (ngSubmit)="registerUser(form.value)">
+
+
+      <Label>
+        <h5>Name</h5>
+      </Label>
+      <input type="text" placeholder="Name" required="required" name="name" [(ngModel)]="name" (keyup)='validatefirstname()'>
+
+
+
+<!-- 
+      <input id="name" name="name" class="form-control"
+       required minlength="4" appForbiddenName="bob"
+       [(ngModel)]="user.name" #name="ngModel" >
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+        <div *ngIf="name.errors.forbiddenName">
+          Name cannot be Bob.
+        </div>
+      </div> -->
+
+      <!-- <Label>
+        <h5>User ID</h5>
+      </Label>
+      <input type="text" placeholder="UserID" required="required" name="userid" [(ngModel)]="userid"> -->
+
+      <Label>
+        <h5>Role</h5>
+      </Label>
+      <!-- <input type="text" placeholder="Role" required="required" name="role" [(ngModel)]="role"> -->
+      <div>
+        <select class="" type="dropdown" placeholder="Role" required="required" name="role" [(ngModel)]="role">
+          <option value="project-manager">Project Manager</option>
+          <option value="resource-manager">Resource Manager</option>
+          <option value="employee">Developer</option>
+          <option value="admin">Admin</option>
+          <option value="architecture">Architecture</option>
+          <option value="quality-assurance">Quality Assurance</option>
+          <option value="business-analyst">Business Analyst</option>
+
+
+
+        </select>
+      </div>
+      <!-- <div class="full-width">
+        <h5 class=" color">Upload profile picture</h5>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <input type="file" id="main-input" class="form-control form-input form-style-base" name="profilepic" [(ngModel)]="profilepic">
+          <h4 id="fake-btn" class="form-input fake-styled-btn text-center truncate btn-success"></h4>
+        </div>
+      </div> -->
+      <!-- <div class="emailBox">
+        <label for="emailAddress">Your email address</label>
+        <br>
+        <input id="emailAddress" type="email" size="64" maxLength="64" required placeholder="username@beststartupever.com" pattern=".+@beststartupever.com"
+          title="Please provide only a Best Startup Ever corporate email address">
+      </div> -->
+      <Label>
+        <h5>Email</h5>
+      </Label>
+      <input type="email" placeholder="example@gmail.com" required="required" name="email" [(ngModel)]="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+
+
+
+      <!-- <label for="name">Email Address</label>
+          <input type="text" class="form-control" id="emailaddress"
+          required
+          [(ngModel)]="model.email" name="email"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+          #email="ngModel">
+          <div [hidden]="email.valid || email.pristine"
+             class="alert alert-danger">
+             <div [hidden]="!email.hasError('required')">Email is required</div>
+             <div [hidden]="!email.hasError('pattern')">Email format should be 
+                <small><b>joe@abc.com</b></small>
+             </div>
+          </div> -->
+
+
+      <Label>
+        <h5>Contact</h5>
+      </Label>
+      <input type="text" placeholder="Contact" required="required" name="contact" [(ngModel)]="contact">
+
+      <Label>
+        <h5>Skills</h5>
+      </Label>
+      <input type="text" placeholder="Skills" required="required" name="skill" [(ngModel)]="skill">
+
+      <br>
+      <h5>Date of Birth :</h5>
+      <my-date-picker ngModel name="dob" [options]="myDatePickerOptions" [(ngModel)]="dob" #picker (ngModelChange)="getDOB(dob)"
+        required>
+      </my-date-picker>
+      <br>
+      <br>
+
+      <h5>Enrolled Year:</h5>
+      <my-date-picker ngModel name="enrolledyear" [options]="myDatePickerOptions" [(ngModel)]="enrolledyear" #picker (ngModelChange)="getEnrolledYear(enrolledyear)"
+        required>
+      </my-date-picker>
+      <br>
+
+      <Label>
+        <h5>Address</h5>
+      </Label>
+      <input type="text" placeholder="Address" required="required" name="address" [(ngModel)]="address">
+
+
+      <div class="btn-toolbar">
+        <button type="submit" class="col-sm-4 btn btn-primary btn-block btn-large">Submit</button>
+        <br>
+        <!-- <a href="admin" type="button" class="col-sm-4 btn btn-primary btn-block btn-large">Cancel</a> -->
+      </div>
+    </form>
+    <br>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+
+
+input.ng-untouched, textarea.ng-untouched {
+	border:3px solid rgb(88, 105, 116);
+}
+
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+	background-color: #131416;
+	
+	border-radius:3px;
+	background-image: url('https://www.etechhacks.com/wp-content/uploads/2017/09/data-recoveryy.jpg');
+	border-color: black;
+}
+
+.legend{
+	color: blue;
+	text-decoration-color: blueviolet;
+
+}
+
+
+.btn-secondary {
+    color: #fff;
+    background-color: #101e2b;
+    border-color: #868e96;
+}
+
+h5,h4{
+	color: rgb(1, 3, 104);
+font-style: normal;
+font-stretch: condensed;
+font-weight: 900;
+
+}
+
+h6{
+	font-weight: 900;
+}

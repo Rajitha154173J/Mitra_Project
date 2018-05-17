@@ -1,0 +1,16 @@
+<app-navbar-pm></app-navbar-pm>
+
+
+
+
+<div class="container jumbotron col-md-6">
+  <div class="list-group">
+    <div class="list-group-item active">
+      <h3>Reports</h3>
+
+      <div class="list-group-item-success list-group-item" *ngFor="let pro of projects">
+        <p (click)="getReportDetails(pro)">{{pro.name}} phase {{pro.id}}</p>
+      </div>
+    </div>
+  </div>
+</div>

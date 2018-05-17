@@ -1,0 +1,122 @@
+<app-navbar-pm>
+</app-navbar-pm>
+
+
+
+<br>
+<div class="col-sm-6 container jumbotron">
+
+  <fieldset>
+    <legend> Project Details</legend>
+    <!-- 
+      <div class="form-group" [ngClass]="{ 'has-error': projectId.invalid && projectId.touched }">
+        <input type="text" class="form-control" name="projectId" placeholder="projectId" required
+          [(ngModel)]="newprojectId.projectId" #name="ngModel"> 
+
+          <span class="help-block" *ngIf="projectId.invalid && projectId.touched">ProjectId is required.</span>
+      </div>
+ -->
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center  cl">
+        <div class="">
+          <label>Project ID :</label>
+          {{projects.id}}
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>Project Name :</label>
+          {{projects.name}}
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>Received Date :</label>
+          {{projects.received_date}}
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>Submission Date :</label>
+          {{projects.submission_date}}
+        </div>
+      </li>
+
+
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>No of phases :</label>
+          {{projects.noOfPhase}}
+        </div>
+      </li>
+
+      <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>status :</label>
+          {{projects.status}}
+        </div>
+      </li> -->
+      <br>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>No of Developers :</label>
+          {{projects.NoOfDev}}
+        </div>
+        <br>
+
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>No of BA :</label>
+          {{projects.NoOfBA}}
+        </div>
+        <br>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>No of QA :</label>
+          {{projects.NoOfQA}}
+        </div>
+        <br>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>No of Architecture :</label>
+          {{projects.NoOfArchi}}
+        </div>
+        <br>
+      </li>
+      <br>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="">
+          <label>Description :</label>
+          {{projects.description}}
+        </div>
+        <br>
+      </li>
+      <br>
+
+
+      <span class="pull-right">
+        <div class="btn-group ">
+          <label class="btn btn-success ">
+            <a class="btn btn-success" href="project" type="button" name="save" id="option1">
+              <h5> Done</h5>
+            </a>
+          </label>
+
+          <label class="btn btn-success ">
+            <a (click)="delete(id)" class="btn btn-success" type="button" name="delete" id="">
+              <h5> Delete</h5>
+            </a>
+          </label>
+        </div>
+      </span>

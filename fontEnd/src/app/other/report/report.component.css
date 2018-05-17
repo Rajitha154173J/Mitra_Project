@@ -1,0 +1,40 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    min-width: 300px;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+  .jumbotron {
+    background-image: url('http://hoperun.net/sept2017/wp-content/uploads/2014/05/Data-Warehousing-Image.jpg');
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #c2ced9;
+    border-radius: .3rem;
+}
+
+h5{
+    font-weight: 900;
+}
+
+#sidebar {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS8ouSfNyJQZ8H5hA6wR39xkch9ySCZO7bf5sIUm82QuilXFkS');
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #c2ced9;
+  border-radius: .3rem;
+}
+
+h5{
+  font-weight: 900;
+}
+
+.aaa{
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS8ouSfNyJQZ8H5hA6wR39xkch9ySCZO7bf5sIUm82QuilXFkS');
+ 
+}
